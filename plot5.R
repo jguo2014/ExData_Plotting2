@@ -22,7 +22,7 @@ mobileEmissions <- tapply(mobileSourse$Emissions, mobileSourse$year, sum)
 # Plot the mobileEmissions data (barplot)
 png("plot5.png", width=480, height=480, bg="lightgrey")
 
-barplot(mobileEmissions, main=expression('Total mobile emissions of PM'[2.5]*''),
+barplot(mobileEmissions, main=expression('Total mobile emissions of PM'[2.5]*' in Baltimore City'),
         xlab='Years', ylab=expression('PM'[2.5]), ylim=c(0, 2000), col=c("red", "yellow", "darkgreen","green"))
 abline(lm(mobileEmissions~c(1:4)), lwd=2,col='black')
 text(3.1, 1000, labels='Overall trend', col='black')
